@@ -18,7 +18,7 @@ let toggleArrow = document.getElementsByClassName("toggle-arrow")
 menuToggle.addEventListener("click", function () {
     if (navbar__col2.style.maxHeight === "0" || navbar__col2.style.maxHeight === "") {
         menuImg.src = "images/xbtn.png"
-        /* menuImg.style.transform = "scale(0.7)" */
+        menuImg.style.transform = "scale(0.7)"
         navbar__col2.style.maxHeight = "500px"
         navbar__col2.style.transition = "max-height 0.6s ease-in"
         navbar__col2.style.marginBlock = "1rem"
@@ -27,7 +27,7 @@ menuToggle.addEventListener("click", function () {
         navbar.style.height = "auto"
     } else {
         menuImg.src = "images/bars-3.svg"
-        /* menuImg.style.transform = "" */
+        menuImg.style.transform = ""
         navbar__col2.style.maxHeight = ""
         navbar__col2.style.transition = ""
         navbar__col2.style.marginBlock = ""
