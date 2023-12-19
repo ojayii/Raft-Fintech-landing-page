@@ -1,4 +1,5 @@
-let menuToggle = document.querySelector(".navbar__menuon img")
+let menuToggle = document.querySelector(".navbar__menuon")
+let menuImg = document.querySelector(".navbar__menuon img")
 let navbar__col2 = document.querySelector(".navbar__col2")
 let navbar__col3 = document.querySelector(".navbar__col3")
 let navbar = document.querySelector(".navbar")
@@ -16,7 +17,8 @@ let toggleArrow = document.getElementsByClassName("toggle-arrow")
 
 menuToggle.addEventListener("click", function () {
     if (navbar__col2.style.maxHeight === "0" || navbar__col2.style.maxHeight === "") {
-        menuToggle.src = "images/import.png"
+        menuImg.src = "images/xbtn.png"
+        menuImg.style.transform = "scale(0.7)"
         navbar__col2.style.maxHeight = "500px"
         navbar__col2.style.transition = "max-height 0.6s ease-in"
         navbar__col2.style.marginBlock = "1rem"
@@ -24,7 +26,8 @@ menuToggle.addEventListener("click", function () {
         navbar__col3.style.transition = "max-height 1.2s ease-in"
         navbar.style.height = "auto"
     } else {
-        menuToggle.src = "images/bars-3.svg"
+        menuImg.src = "images/bars-3.svg"
+        menuImg.style.transform = ""
         navbar__col2.style.maxHeight = ""
         navbar__col2.style.transition = ""
         navbar__col2.style.marginBlock = ""
