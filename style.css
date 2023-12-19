@@ -189,10 +189,14 @@ label {
     text-align: right;
     background-color: inherit;
     border: none;
-    transition: 900s all;
   }
 }
-
+@media (min-width: 0rem) and (max-width: 47.9875rem) {
+  .navbar__menuon img {
+    max-width: 1.5rem;
+    height: auto;
+  }
+}
 .topheader {
   display: flex;
   flex-direction: column;
