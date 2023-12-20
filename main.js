@@ -1,7 +1,7 @@
 let menuToggle = document.querySelector(".navbar__menuon")
 let menuImg = document.querySelector(".navbar__menuon img")
-let navbar__col2 = document.querySelector(".navbar__col2")
-let navbar__col3 = document.querySelector(".navbar__col3")
+let navbarCol2 = document.querySelector(".navbar__col2")
+let navbarCol3 = document.querySelector(".navbar__col3")
 let navbar = document.querySelector(".navbar")
 
 const carousel = document.querySelector('.carousel')
@@ -16,23 +16,23 @@ let toggleText = document.getElementsByClassName("toggle-text")
 let toggleArrow = document.getElementsByClassName("toggle-arrow")
 
 menuToggle.addEventListener("click", function () {
-    if (navbar__col2.style.maxHeight === "0" || navbar__col2.style.maxHeight === "") {
+    if (navbarCol2.style.maxHeight === "0" || navbarCol2.style.maxHeight === "") {
         menuImg.src = "images/xbtn.png"
         menuImg.style.transform = "scale(0.7)"
-        navbar__col2.style.maxHeight = "500px"
-        navbar__col2.style.transition = "max-height 0.6s ease-in"
-        navbar__col2.style.marginBlock = "1rem"
-        navbar__col3.style.maxHeight = "500px"
-        navbar__col3.style.transition = "max-height 1.2s ease-in"
+        navbarCol2.style.maxHeight = "500px"
+        navbarCol2.style.transition = "max-height 0.6s ease-in"
+        navbarCol2.style.marginBlock = "1rem"
+        navbarCol3.style.maxHeight = "500px"
+        navbarCol3.style.transition = "max-height 1.2s ease-in"
         navbar.style.height = "auto"
     } else {
         menuImg.src = "images/bars-3.svg"
         menuImg.style.transform = ""
-        navbar__col2.style.maxHeight = ""
-        navbar__col2.style.transition = ""
-        navbar__col2.style.marginBlock = ""
-        navbar__col3.style.maxHeight = ""
-        navbar__col3.style.transition = ""
+        navbarCol2.style.maxHeight = ""
+        navbarCol2.style.transition = ""
+        navbarCol2.style.marginBlock = ""
+        navbarCol3.style.maxHeight = ""
+        navbarCol3.style.transition = ""
         navbar.style.height = ""
     }
 })
