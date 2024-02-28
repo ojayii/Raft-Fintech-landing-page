@@ -1,11 +1,27 @@
-﻿# This repository is that of a Fintech landing page.
+# RAFT FINTECH LANDING PAGE
 
-Technologies used:
-- HTML
+This is the development of a landing page design I got from a figma design on a post on X.
+
+## Table of contents
+
+- [Links](#links)
+- [Built with](#built-with)
+- [Author](#author)
+
+### Links
+- Live site URL: https://ojayii.github.io/Raft-Fintech-landing-page/
+- Source URL: https://twitter.com/adeoladev/status/1715890326252994889?s=24&t=47I_3SaewWQcpt4iSj2NbA
+
+### Built with
+
+- Semantic HTML5 markup
 - SCSS
-- Javascript 
+- Javascript
+- Developer tools
+- CSS clamp() function
+- Mobile-first workflow
 
-I got the design from a post I encounterd on X. (link to post below)
+## Author
 
-Live site URL: https://ojayii.github.io/Raft-Fintech-landing-page/
-Source URL: https://www.figma.com/file/jB2ibexIxAVr6C0thvneE7/Raft-Fintech-Website-(Community)?type=design&node-id=2-531&mode=design&t=k0BwCPKVjJfdjeSi-0
+- GitHub - https://github.com/ojayii
+- Frontend Mentor - https://www.frontendmentor.io/profile/ojayii
