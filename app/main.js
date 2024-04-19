@@ -35,7 +35,7 @@ const swiper = new Swiper('.swiper', {
 
 menuToggle.addEventListener("click", function () {
     if (navbar__col2.style.maxHeight === "0" || navbar__col2.style.maxHeight === "") {
-        menuImg.src = "images/xbtn.png"
+        menuImg.src = "/app/images/xbtn.png"
         menuImg.style.transform = "scale(0.7)"
         navbar__col2.style.maxHeight = "500px"
         navbar__col2.style.transition = "max-height 0.6s ease-in"
@@ -44,7 +44,7 @@ menuToggle.addEventListener("click", function () {
         navbar__col3.style.transition = "max-height 1.2s ease-in"
         navbar.style.height = "auto"
     } else {
-        menuImg.src = "images/bars-3.svg"
+        menuImg.src = "/app/images/bars-3.svg"
         menuImg.style.transform = ""
         navbar__col2.style.maxHeight = ""
         navbar__col2.style.transition = ""
