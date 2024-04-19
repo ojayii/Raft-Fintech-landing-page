@@ -184,19 +184,18 @@ label {
 }
 @media (min-width: 0rem) and (max-width: 47.9875rem) {
   .navbar__menuon {
-    display: block;
+    display: inline-block;
     margin-left: auto;
     text-align: right;
     background-color: inherit;
     border: none;
   }
 }
-@media (min-width: 0rem) and (max-width: 47.9875rem) {
-  .navbar__menuon img {
-    max-width: 1.5rem;
-    height: auto;
-  }
+.navbar__menuon img {
+  max-width: 1.5rem;
+  height: auto;
 }
+
 .topheader {
   display: flex;
   flex-direction: column;
@@ -987,15 +986,10 @@ label {
     flex-shrink: 0;
   }
 }
-@media (min-width: 64rem) and (max-width: 1000rem) {
+@media (min-width: 64rem) and (max-width: 10000000000000000000000000000000000rem) {
   .grids__row2__col2 .imgcontainer .gradient {
     bottom: -3rem;
     overflow: hidden;
-  }
-}
-@media (min-width: 0rem) and (max-width: 63.9875rem) {
-  .grids__row2__col2 .imgcontainer .gradient {
-    /*left: -3.086%;*/
   }
 }
 @media (min-width: 48rem) and (max-width: 63.9875rem) {
@@ -1505,8 +1499,6 @@ label {
   justify-content: center;
   align-items: center;
   background: #48D64C;
-  width: 100%;
-  overflow: hidden;
 }
 @media (min-width: 0rem) and (max-width: 47.9875rem) {
   .carousel-container {
@@ -1527,31 +1519,25 @@ label {
 }
 @media (min-width: 0rem) and (max-width: 47.9875rem) {
   .carousel-container > h6 {
-    width: 100%;
-    margin-bottom: 2.5rem;
+    width: calc(100% - 3rem);
+    margin: clamp(2rem, 6.94vw, 6.25rem) auto 2.5rem auto;
   }
 }
 .carousel-container .carousel {
-  display: flex;
-  align-items: flex-start;
   width: 100%;
   height: clamp(21.5rem, 27.78vw, 25rem);
   margin-bottom: clamp(1.5rem, 2.78vw, 2.5rem);
-  overflow: hidden;
 }
 @media (min-width: 0rem) and (max-width: 47.9875rem) {
   .carousel-container .carousel {
     height: auto;
     margin-bottom: 0;
-    gap: 1.67%;
   }
 }
 .carousel-container .carousel .review {
   display: flex;
-  width: 38.89%;
+  width: 26rem;
   height: 100%;
-  flex: 0 0 33.33%;
-  /* Show three reviews on desktop */
   padding: clamp(1rem, 1.67vw, 1.5rem) clamp(1.5rem, 2.22vw, 2rem);
   flex-direction: column;
   align-items: flex-start;
@@ -1560,19 +1546,13 @@ label {
 }
 @media (min-width: 0rem) and (max-width: 47.9875rem) {
   .carousel-container .carousel .review {
-    flex: 0 0 100vw;
     display: flex;
     max-width: 100%;
-    padding: 1.5rem 8.53%;
+    padding: 1.5rem 15%;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
     border-left: none;
-  }
-}
-@media (min-width: 48rem) and (max-width: 63.9875rem) {
-  .carousel-container .carousel .review {
-    flex-basis: 51%;
   }
 }
 .carousel-container .carousel .review > p {
@@ -1618,10 +1598,13 @@ label {
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
-  gap: 1rem;
+  gap: 2rem;
+  padding-right: 3%;
   width: 100%;
+  height: 4rem;
+  margin-bottom: 1rem;
 }
-.carousel-container button {
+.carousel-container .arrowbtns button {
   display: flex;
   width: clamp(2.5rem, 4.2vw, 3.75rem);
   height: clamp(2.5rem, 4.2vw, 3.75rem);
@@ -1632,9 +1615,18 @@ label {
   border: 1px solid #000;
   background: #FFF;
   transition: background-color 0.2s ease-in-out;
+  position: relative;
 }
-.carousel-container button:hover {
+.carousel-container .arrowbtns button:hover {
   background-color: #48D64C;
+}
+.carousel-container .arrowbtns button > img {
+  width: 13px;
+  height: auto;
+}
+.carousel-container .swiper-button-prev:after,
+.carousel-container .swiper-button-next:after {
+  content: none;
 }
 .carousel-container .rotate {
   transform: rotate(180deg);
@@ -1678,10 +1670,12 @@ label {
   background-color: inherit;
   transition: background-color 0.2s ease-in-out;
 }
-.FAQ .accordion .row .toggle-row:hover {
-  background-color: rgba(206, 198, 198, 0.13);
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
+@media (min-width: 47.9875rem) and (max-width: 10000000000000000000000000000000000rem) {
+  .FAQ .accordion .row .toggle-row:hover {
+    background-color: rgba(206, 198, 198, 0.13);
+    -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+  }
 }
 .FAQ .accordion .row .toggle-row p {
   color: #FFF;
