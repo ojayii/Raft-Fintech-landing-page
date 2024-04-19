@@ -4,7 +4,7 @@ $breakpoints: (
     "tabletmin": 48rem,
     "tabletmax": 63.9875rem,
     "desktop": 64rem,
-    "infinite": 1000rem,
+    "infinite": 10000000000000000000000000000000000rem,
 );
 
 @mixin break($min, $max) {

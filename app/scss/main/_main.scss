@@ -167,13 +167,17 @@
         display: none;
 
         @include p.break(zero, mobile) {
-            display: block;
+            display: inline-block;
             margin-left: auto;
             // width: 50%;
             text-align: right;
             background-color: inherit;
             border: none;
-            transition: 900s all;
+        }
+
+        & img {
+            max-width: 1.5rem;
+            height: auto;
         }
     }
 
@@ -1073,8 +1077,8 @@
                         overflow: hidden;
                     }
 
-                    @include p.break(zero, tabletmax) {
-                        left: -3.086%;
+                    @include p.break(zero, mobile) {
+                        //left: -3.086%;
                     }
 
                     @include p.break(tabletmin, tabletmax) {
@@ -1667,8 +1671,6 @@
     justify-content: center;
     align-items: center;
     background: #48D64C;
-    width: 100%;
-    overflow: hidden;
 
     @include p.break(zero, mobile) {
         padding: 2rem 1.5rem;
@@ -1688,54 +1690,39 @@
         margin-bottom: clamp(4rem, 7.22vw, 6.5rem);
 
         @include p.break(zero, mobile) {
-            width: 100%;
-            margin-bottom: 2.5rem;
+            width: calc(100% - 3rem);
+            margin: clamp(2rem, 6.94vw, 6.25rem) auto 2.5rem auto;
         }
     }
 
     & .carousel {
-        display: flex;
-        align-items: flex-start;
-        //gap: 1.67%;
         width: 100%;
         height: clamp(21.5rem, 27.78vw, 25rem);
         margin-bottom: clamp(1.5rem, 2.78vw, 2.5rem);
-        overflow: hidden;
 
         @include p.break(zero, mobile) {
             height: auto;
             margin-bottom: 0;
-            gap: 1.67%;
         }
 
         & .review {
             display: flex;
-            // width: 26rem;
-            width: 38.89%;
+            width: 26rem;
             height: 100%;
-            flex: 0 0 33.33%;
-            /* Show three reviews on desktop */
             padding: clamp(1rem, 1.67vw, 1.5rem) clamp(1.5rem, 2.22vw, 2rem);
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-between;
-            //gap: 1.5rem;
             border-left: 2px solid var(--Background, #070606);
 
             @include p.break(zero, mobile) {
-                flex: 0 0 100vw;
                 display: flex;
-                // max-width: 89.6%;
                 max-width: 100%;
-                padding: 1.5rem 8.53%;
+                padding: 1.5rem 15%;
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 1.5rem;
                 border-left: none;
-            }
-
-            @include p.break(tabletmin, tabletmax) {
-                flex-basis: 51%;
             }
 
             &>p {
@@ -1804,29 +1791,43 @@
         display: flex;
         align-items: flex-start;
         justify-content: flex-end;
-        gap: 1rem;
+        gap: 2rem;
+        padding-right: 3%;
         width: 100%;
+        height: 4rem;
+        margin-bottom: 1rem;
 
         @include p.break(zero, mobile) {}
+
+        & button {
+            display: flex;
+            width: clamp(2.5rem, 4.2vw, 3.75rem);
+            height: clamp(2.5rem, 4.2vw, 3.75rem);
+            padding: 1.125rem;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6.25rem;
+            border: 1px solid #000;
+            background: #FFF;
+            transition: background-color 0.2s ease-in-out;
+            position: relative;
+    
+            @include p.break(zero, mobile) {}
+    
+            &:hover {
+                background-color: #48D64C;
+            }
+
+            &> img {
+                width: 13px;
+                height: auto;
+            }
+        }
     }
 
-    & button {
-        display: flex;
-        width: clamp(2.5rem, 4.2vw, 3.75rem);
-        height: clamp(2.5rem, 4.2vw, 3.75rem);
-        padding: 1.125rem;
-        justify-content: center;
-        align-items: center;
-        border-radius: 6.25rem;
-        border: 1px solid #000;
-        background: #FFF;
-        transition: background-color 0.2s ease-in-out;
-
-        @include p.break(zero, mobile) {}
-
-        &:hover {
-            background-color: #48D64C;
-        }
+    .swiper-button-prev:after, 
+    .swiper-button-next:after {
+        content: none;
     }
 
     .rotate {
@@ -1884,11 +1885,13 @@
                 background-color: inherit;
                 transition: background-color 0.2s ease-in-out;
 
-                @include p.break(zero, mobile) {}
+                @include p.break(mobile, infinite) {
+                    
+                    &:hover {
+                        background-color: rgba(206, 198, 198, 0.13);
+                        backdrop-filter: blur(15px);
+                    }
 
-                &:hover {
-                    background-color: rgba(206, 198, 198, 0.13);
-                    backdrop-filter: blur(15px);
                 }
 
                 & p {

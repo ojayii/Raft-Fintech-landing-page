@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Raft Fintech</title>
     <link rel="stylesheet" href="/dist/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg" sizes="32x32" href="./images/import.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 </head>
 
@@ -20,13 +23,13 @@
             <p>Raft</p>
         </section>
         <label for="nav-menuon">Nav links toggle on button.</label>
-        <button id="nav-menuon" class="navbar__menuon" type="menu">
+        <button id="nav-menuon" class="navbar__menuon" type="button">
             <img src="images/bars-3.svg" alt="">
         </button>
         <section class="navbar__col2">
             <a href="http://">Solutions</a>
             <a href="http://">Learn</a>
-            <a href="http://">Learn</a>
+            <a href="http://">About</a>
         </section>
         <section class="navbar__col3">
             <a href="http://">Login</a>
@@ -287,10 +290,10 @@
                 </div>
             </section>
         </figcaption>
-        <section class="carousel-container">
+        <section class="swiper carousel-container ">
             <h6>Join over 3 million members</h6>
-            <div class="carousel">
-                <div class="review">
+            <div class="swiper-wrapper carousel ">
+                <div class="swiper-slide review ">
                     <p>RAFT has transformed my approach to finance. Their smart investing options have helped me grow my
                         wealth, and their user-friendly platform makes managing my money a breeze. I've never felt more
                         confident about my financial future.</p>
@@ -302,7 +305,7 @@
                         <img src="images/Frame127.svg" alt="Small sized photo of a man." class="right">
                     </div>
                 </div>
-                <div class="review">
+                <div class="swiper-slide review ">
                     <p>I can't express how grateful I am to RAFT. Their wealth management services have been a
                         game-changer for my family's financial security. The expert guidance and personalized strategies
                         have given us peace of mind, knowing that our future is in capable hands.</p>
@@ -314,7 +317,7 @@
                         <img src="images/Frame130.svg" alt="Small sized photo of a man." class="right">
                     </div>
                 </div>
-                <div class="review">
+                <div class="swiper-slide review ">
                     <p>RAFT's financial planning services have been a lifeline for me. I always struggled with managing
                         my money, but their team crafted a tailored plan that addressed my goals and concerns. It's been
                         a game-changer in achieving my financial dreams</p>
@@ -328,8 +331,8 @@
                 </div>
             </div>
             <div class="arrowbtns">
-                <button class="prev"><img src="images/arrow-small-left.svg" alt=""></button>
-                <button class="next rotate"><img src="images/arrow-small-left.svg" alt=""></button>
+                <button class="swiper-button-prev prev"><img src="images/arrow-small-left.svg" alt=""></button>
+                <button class="swiper-button-next next rotate"><img src="images/arrow-small-left.svg" alt=""></button>
             </div>
         </section>
         <section class="FAQ">
@@ -437,8 +440,9 @@
         </section>
     </footer>
 
-    <script src="main.js"></script>
-
+    <script type="module" src="main.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
 </body>
 
 </html>
