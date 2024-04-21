@@ -35,7 +35,7 @@ const swiper = new Swiper('.swiper', {
 
 menuToggle.addEventListener("click", function () {
     if (navbar__col2.style.maxHeight === "0" || navbar__col2.style.maxHeight === "") {
-        menuImg.src = "./app/images/xbtn.png"
+        menuImg.src = "./app/images/Screenshot_20240421-142451.jpg"
         menuImg.style.transform = "scale(0.7)"
         navbar__col2.style.maxHeight = "500px"
         navbar__col2.style.transition = "max-height 0.6s ease-in"
